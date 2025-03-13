@@ -1,0 +1,55 @@
+[
+    
+    {
+        "filename": "parsed_documents/competitive_markets.md",
+        "summary": "Competitive markets consist of many small firms offering homogeneous products with perfect information and free entry/exit. Firms are price takers, facing a perfectly elastic demand curve. Profit maximization occurs where marginal revenue equals marginal cost (MR = MC). In the short run, firms continue operating if revenue covers variable costs, while long-run equilibrium ensures zero economic profit through firm entry and exit. Technological advancements improve efficiency, while declining industries see firm exits and resource reallocation. Competitive markets drive productive and allocative efficiency, shaping pricing and industry dynamics."
+    },
+    {
+        "filename": "parsed_documents/consumer_behaviour.md",
+        "summary": "Consumer behavior is driven by marginal utility, where satisfaction decreases with additional consumption (diminishing marginal utility). Consumers maximize total utility by equalizing marginal utility per dollar spent across goods. Substitution and income effects explain the downward-sloping demand curve: consumers switch to cheaper goods and adjust consumption based on real income changes. Consumer surplus measures the difference between willingness to pay and actual price, influencing welfare analysis, taxation, and policy decisions. Understanding these principles helps predict demand shifts and optimize economic decision-making."
+    },
+    {
+        "filename": "parsed_documents/economic_concepts.md",
+        "summary": "Economics studies how scarce resources are allocated to satisfy unlimited wants, focusing on scarcity, opportunity cost, and factors of production (land, labor, capital). It is divided into microeconomics (individual and firm behavior) and macroeconomics (economic aggregates like inflation and growth). Markets self-organize through incentives, but government intervention addresses failures. Key economic challenges include productivity growth, aging populations, climate change, technological shifts, globalization, income inequality, and policy-driven stability. Understanding these issues helps shape informed decisions in business, policy, and society."
+    },
+    {
+        "filename": "parsed_documents/economic_theories.md",
+        "summary": "Economic theories are built on positive and normative economics, where positive statements are fact-based and testable, while normative statements involve value judgments. Economists disagree due to differences in values, assumptions, and data interpretations. Theories are developed through observation, hypothesis formation, empirical testing, and revision. Understanding correlation vs. causation is crucial for accurate analysis. Economic data, including cross-sectional, time-series, and panel data, helps test theories and inform policy. Statistical tools like index numbers, scatter diagrams, and regression analysis aid in decision-making and economic forecasting."
+    },
+    {
+        "filename": "parsed_documents/efficiency.md",
+        "summary": "Economic efficiency ensures optimal resource allocation, maximizing societal welfare. Productive efficiency occurs when goods are produced at the lowest cost (P = minimum ATC), while allocative efficiency happens when price equals marginal cost (P = MC). Perfect competition achieves both, but monopolies cause inefficiencies by restricting output and raising prices. Market failures arise from externalities, public goods, market power, and asymmetric information. Regulation, such as price controls and antitrust laws, addresses inefficiencies in monopolies and oligopolies, ensuring fair competition and better resource allocation."
+    },
+    {
+        "filename": "parsed_documents/elasticity.md",
+        "summary": "Elasticity measures how responsive quantity demanded or supplied is to changes in price, income, or related goods' prices. Price elasticity of demand (PED) determines whether demand is elastic (>1), inelastic (<1), or unit elastic (=1), affecting total revenue. Price elasticity of supply (PES) depends on factors like input availability and production time. Income elasticity of demand (YED) distinguishes normal, luxury, and inferior goods, while cross elasticity of demand (XED) identifies substitutes and complements. Elasticity influences tax burden distribution, pricing strategies, and economic policies."
+    },
+    {
+        "filename": "parsed_documents/goverment_intervention.md",
+        "summary": "Government intervention ensures property rights, public goods, market stability, and income redistribution. Free markets maximize allocative efficiency (P = MC), foster innovation, and allow consumer choice, but market failures—monopolies, externalities, public goods, and asymmetric information—justify intervention. Governments use taxes, subsidies, regulations, and social policies to correct failures but risk inefficiencies, deadweight loss, and regulatory capture. Balancing free markets and intervention is crucial to achieving economic stability, fairness, and sustainability."
+    },
+    {
+        "filename": "parsed_documents/imperfect_competition.md",
+        "summary": "Imperfect competition includes monopolistic competition and oligopoly, where firms have market power and engage in strategic behavior. Monopolistic competition features many firms with differentiated products, leading to advertising, excess capacity, and zero long-run profit. Oligopolies are dominated by few firms, with high entry barriers, price rigidity, and mutual interdependence. Game theory explains firm strategies, including collusion, price leadership, and competitive tactics like price wars and innovation races. Barriers such as economies of scale and brand loyalty influence market dominance, shaping industry behavior."
+    },
+    {
+        "filename": "parsed_documents/monopoly.md",
+        "summary": "A monopoly exists when a single firm dominates a market with no close substitutes and significant barriers to entry, allowing it to set prices and sustain long-run profits. Monopolists face a downward-sloping demand curve, maximizing profit where MR = MC. Barriers to entry like patents, economies of scale, and strategic pricing prevent competition. Over time, creative destruction can disrupt monopolies. Cartels mimic monopolies by colluding on prices but face cheating and legal risks. Price discrimination allows monopolists to charge different consumers varying prices, increasing revenue but raising ethical concerns."
+    },
+    {
+        "filename": "parsed_documents/price_control.md",
+        "summary": "Price controls disrupt market equilibrium, leading to surpluses (price floors) or shortages (price ceilings). Price floors, such as minimum wages, can raise incomes but may cause unemployment. Price ceilings, like rent controls, lower costs for tenants but reduce housing supply and quality. Market efficiency occurs when consumer and producer surplus are maximized, ensuring optimal resource allocation. Quotas limit market quantity, raising prices and causing deadweight loss. Policymakers must balance economic efficiency with social objectives to minimize unintended consequences."
+    },
+    {
+        "filename": "parsed_documents/producers_long_run.md",
+        "summary": "In the long run, firms adjust all inputs to minimize costs and maximize profits, guided by the principle of substitution. The Long-Run Average Cost (LRAC) curve reflects cost efficiency at different output levels, shaped by economies and diseconomies of scale. In the very long run, technological change drives process and product innovation, requiring firms to adapt through R&D and automation. Isoquant analysis helps firms find the most efficient input combinations, ensuring cost minimization. These dynamics shape firm strategies, competitiveness, and industry evolution."
+    },
+    {
+        "filename": "parsed_documents/producers_short_run.md",
+        "summary": "In the short run, firms operate with fixed and variable inputs, aiming to maximize profits where MR = MC. Business structures range from sole proprietorships to corporations, financed through equity, debt, or retained earnings. Production follows the law of diminishing marginal returns, where additional input eventually leads to lower marginal output. Short-run costs include fixed, variable, total, and marginal costs, shaping U-shaped cost curves influenced by input prices and technology. Understanding short-run dynamics helps firms optimize efficiency and profitability."
+    },
+    {
+        "filename": "parsed_documents/supply_demand.md",
+        "summary": "Demand and supply determine market prices and quantities. Demand follows the law of demand, where lower prices increase quantity demanded, influenced by the income effect, substitution effect, and diminishing marginal utility. Demand shifts due to changes in income, preferences, related goods, population, and expectations. Supply follows the law of supply, where higher prices encourage more production, shifting due to input costs, technology, taxes, and supplier numbers. Equilibrium occurs when quantity demanded equals quantity supplied, with price adjustments balancing excess supply or demand. These principles guide market behavior and pricing."
+    }
+]
