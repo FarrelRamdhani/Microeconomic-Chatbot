@@ -38,15 +38,20 @@ search_user_prompt = """Chat History:
 Instruction: Using the above chat history, generate an optimized BM25 query for Elasticsearch that captures all key microeconomic concepts mentioned.
 Search query: """
 
-answer_system_prompt = """You are an Answer Generator specialized in synthesizing information from multiple sources to respond accurately to user queries on microeconomics topics. You will receive three types of information: the chat history, the documents, and a BM25-optimized search query focused on microeconomics.
+answer_system_prompt = """You are an Answer Generator. Your task is to provide a clear and concise response to the user’s microeconomics query. You will be given:
 
+1. A chat history containing the conversation context.
+2. A BM25-optimized search query focused on microeconomics.
+3. A set of documents with relevant information.
 Instructions:
-1. Analyze the chat history to understand the context and specific microeconomic concerns raised by the user.
-2. Review the provided documents carefully and extract key insights that address the user’s query.
-3. Use the BM25-optimized search query as a guide to focus on the relevant topics within the documents.
-4. Synthesize the extracted information into a clear, coherent, and contextually accurate answer.
-5. If any piece of information is missing or not applicable, adjust your response to rely on the available data.
-6. Provide a concise final answer that directly addresses the user query, using evidence from the documents when relevant."""
+
+1. Carefully review the chat history to understand the user’s question and context.
+2. Examine the documents for key insights that directly address the question.
+3. Use the BM25-optimized search query only as a guide to locate the most relevant topics.
+4. Synthesize your findings into a straightforward answer.
+5. Do not mention the sources, methods, or any extraneous details.
+6. If any information is missing, simply provide the best possible answer with what is available.
+Your response must be factual, complete, and directly focused on the user’s query. Always answer in a neat and tidy markdown format"""
 
 answer_user_prompt = """Below is the context and information available to help answer your query:
 
@@ -55,7 +60,7 @@ Chat History: {chat_history}
 Search Query: {search_query}
 This search query then resulted in founding:
 Documents: {documents}
-Based on the above information, please provide a detailed answer to the user’s query. Ensure that your response integrates the relevant points from the documents, aligns with the context from the chat history, and addresses the microeconomics topics highlighted by the search query."""
+Using the above information, please provide a direct and detailed response to the user’s microeconomics-related question. Focus on relevant points from the documents and the context in the chat history. Do not mention any sources or the process used to arrive at your answer. Just provide a concise, final response that addresses the user’s query."""
 
 
 # Load the documents from JSON file
@@ -82,8 +87,11 @@ retriever = BM25Retriever.from_defaults(
 )
 
 # Initiate the openai package to interact with Kolosal AI
-llm = openai.OpenAI(base_url="http://localhost:8080/v1",
+llm = openai.OpenAI(base_url="http://host.docker.internal:8080/v1",
                     api_key="sk-dummy")
+
+# llm = openai.OpenAI(base_url="http://localhost:8080/v1",
+#                     api_key="sk-dummy")
 
 # User Interface
 st.title("Microeconomics Chatbot")
@@ -136,38 +144,31 @@ if user_prompt := st.chat_input("Ask me anything about microeconomics"):
             built_documents += f"{doc.metadata['text']}\n\n"
     
     # Generate response
-    with st.spinner("Generating response..."):
-        # Create a placeholder for the streamed response
-        response_placeholder = st.empty()
-        
-        # Initialize an empty response
-        full_response = ""
-        
-        # Create streaming chat completion
-        with st.chat_message("assistant"):
-            stream = llm.chat.completions.create(
-                model="kolosal",
-                messages=[
-                    {"role": "system", "content": answer_system_prompt},
-                    {"role": "user", "content": answer_user_prompt.format(
-                        chat_history=built_chat_history,
-                        search_query=search_query.choices[0].message.content,
-                        documents=built_documents
-                    )}
-                ],
-                stream=True
-            )
-            
-            # Stream the response
-            for chunk in stream:
-                if chunk.choices[0].delta.content:
-                    content = chunk.choices[0].delta.content
-                    full_response += content
-                    response_placeholder.markdown(full_response)
-        
-        # Add the complete response to chat history
-        st.session_state.messages.append({"role": "assistant", "content": full_response})
+    # Initialize an empty response
+    full_response = ""
     
+    # Create streaming chat completion
+    with st.chat_message("assistant"):
+        stream = llm.chat.completions.create(
+            model="kolosal",
+            messages=[
+                {"role": "system", "content": answer_system_prompt},
+                {"role": "user", "content": answer_user_prompt.format(
+                    chat_history=built_chat_history,
+                    search_query=search_query.choices[0].message.content,
+                    documents=built_documents
+                )}
+            ],
+            stream=True,
+            max_tokens=1024
+        )
+        
+        # Stream the response
+        full_response = st.write_stream(stream)                
+    
+    # Add the complete response to chat history
+    st.session_state.messages.append({"role": "assistant", "content": full_response})
+     
     # Display the documents as toggleable dropdowns
     st.subheader("Referenced Documents")
     for doc in retrieved_documents:
