@@ -51,7 +51,7 @@ Instructions:
 4. Synthesize your findings into a straightforward answer.
 5. Do not mention the sources, methods, or any extraneous details.
 6. If any information is missing, simply provide the best possible answer with what is available.
-Your response must be factual, complete, and directly focused on the user’s query. Always answer in a neat and tidy markdown format"""
+Your response must be factual, complete, and directly focused on the user’s query. Always answer in a neat and tidy markdown format. You are answering directly to the user, so answer it directly without mentioned something like "The user said" or "Based on the user query" or "The user aksed" etc."""
 
 answer_user_prompt = """Below is the context and information available to help answer your query:
 
