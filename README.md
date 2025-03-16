@@ -12,6 +12,11 @@ Microeconomic Chatbot is an **open-source** chatbot designed for answering **mic
 - 🖥️ **Docker-Ready**: Quick setup with Docker.
 - 🆓 **Open Source**: Licensed under **Apache 2.0**, so anyone can use and modify it.
 
+## Prerequisites
+Before running the chatbot, ensure you have the following installed:
+- **Docker**: Install Docker from [here](https://docs.docker.com/get-docker/).
+- **Kolosal AI**: Install [Kolosal AI](kolosal.ai), an open-source platform for training and running your own models.
+
 ## Getting Started
 Follow these steps to set up and run the chatbot using Docker.
 
