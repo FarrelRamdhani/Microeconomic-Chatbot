@@ -45,7 +45,7 @@ answer_system_prompt = """You are an Answer Generator. Your task is to provide a
 3. A set of documents with relevant information.
 Instructions:
 
-1. Carefully review the chat history to understand the user’s question and context.
+1. Carefully review the chat history to understand the user’s question and context. Always focus on the last user query (the most recent/bottom one in the chat history)
 2. Examine the documents for key insights that directly address the question.
 3. Use the BM25-optimized search query only as a guide to locate the most relevant topics.
 4. Synthesize your findings into a straightforward answer.
