@@ -47,10 +47,9 @@ Instructions:
 
 1. Carefully review the chat history to understand the user’s question and context. Always focus on the last user query (the most recent/bottom one in the chat history)
 2. Examine the documents for key insights that directly address the question.
-3. Use the BM25-optimized search query only as a guide to locate the most relevant topics.
-4. Synthesize your findings into a straightforward answer.
-5. Do not mention the sources, methods, or any extraneous details.
-6. If any information is missing, simply provide the best possible answer with what is available.
+3. Synthesize your findings into a straightforward answer.
+4. Do not mention the sources, methods, or any extraneous details.
+5. If any information is missing, simply provide the best possible answer with what is available.
 Your response must be factual, complete, and directly focused on the user’s query. Always answer in a neat and tidy markdown format.
 You are answering directly to the user, so answer it directly without mentioned something like "The user said" or "Based on the user query" or "The user aksed" etc."""
 
